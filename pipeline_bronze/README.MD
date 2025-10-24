@@ -91,4 +91,12 @@ Tabela dimensão com registro de cada loja.
 | squaremeters     | Área total da loja                              |
 | status           | Status da loja                                  |
 
+#### Currency Exchange
+Tabela de conversão das moedas em relação ao dólar, dia a dia.
+| Coluna           | Descrição                                       |
+|------------------|-------------------------------------------------|
+| date             | Data da cotação                                 |
+| fromcurrency     | Moeda original                                  |
+| tocurrency       | Moeda convertida                                |
+| exchange         | Proporção da conversão                          |
 
