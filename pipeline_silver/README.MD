@@ -3,6 +3,13 @@ A camada Silver é responsável por tratar, limpar e integrar os dados vindos da
 Nesta etapa, os dados deixam de estar apenas padronizados e passam a estar confiáveis e prontos para análises intermediárias ou para alimentar a camada Gold.
 
 ### Transformações nas tabelas
+#### Orders
+Tabela fato com registros de cada pedido.
+| Coluna           | Transformação realizada                         |
+|------------------|-------------------------------------------------|
+| orderdate        | Formatado para data                             |
+| deliverydate     | Formatado para data                             |
+
 #### Customers
 Tabela dimensão com cadastro de todos os clientes.
 | Coluna           | Transformação realizada                         |
