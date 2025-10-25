@@ -22,6 +22,6 @@ Tabela dimensão com cadastro de todos os clientes.
 Tabela fato com registro dos detalhes dos itens que compõem cada pedido.
 | Coluna           | Descrição                                       |
 |------------------|-------------------------------------------------|
-| total_price      | Multiplicação da quantidade e do valor líquido  |
+| total_price      | Multiplicação da quantidade e do valor líquido considerando a conversão do valor do dólar em relação à moeda utilizada na transação  |
 
 
