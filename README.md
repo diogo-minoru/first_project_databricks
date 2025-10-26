@@ -109,9 +109,6 @@ O mesmo pode ser acessado pelo [link](https://app.powerbi.com/view?r=eyJrIjoiZDh
 
 # 6 - Próximos passos
 Como continuidade da evolução do projeto, estão previstas as seguintes iniciativas:
-* Criação de jobs para insersão de novos dados.
-* Spark para processamento dos dados.
-Como continuidade da evolução do projeto, estão previstas as seguintes iniciativas:
 
 * Automatização de jobs no Databricks para orquestração da ingestão e atualização dos dados em intervalos definidos.
 
