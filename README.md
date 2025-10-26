@@ -92,7 +92,7 @@ Todas as transformações realizadas na camada gold podem ser vistas pelo [link]
 # 4 - Pipelines no Databricks
 As pipelines no Databricks são fluxos automatizados de ETL (Extract, Transform, Load) que permitem mover, transformar e orquestrar dados de forma contínua e escalável dentro do Lakehouse.
 
-* São processos automatizados que conectam as diferentes camadas da arquitetura medalhão (Raw → Bronze → Silver → Gold).
+São processos automatizados que conectam as diferentes camadas da arquitetura medalhão (Bronze → Silver → Gold).
 * Permitem a execução de tarefas de ingestão, limpeza, transformação e enriquecimento de dados de maneira orquestrada e versionada.
 
 Dados que serão posteriormente consumidos pelos usuários de negócio e analista de dados.
