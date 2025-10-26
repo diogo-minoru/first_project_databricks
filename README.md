@@ -48,11 +48,11 @@ Para simular um ambiente de produção, os dados estão armazenados em um banco 
 
 Para realizar a ingestão dos dados do PostgreSQL para o Databricks, será utilizado o Fivetran, utilizando seus conectores.
 
-![Fivetran](/images/fivetran.png)
+![Fivetran](./images/fivetran.png)
 
 A ingestão será realizada na camada raw, como apresentado no esquema abaixo:
 
-![Medallion](/images/medallion.png)
+![Medallion](./images/medallion.png)
 
 # 3 - Modelagem dos dados
 
@@ -73,7 +73,7 @@ As seguintes tabelas são utilizadas no modelo:
 
 O relacionamento entre as tabelas pode ser visto no diagrama abaixo.
 
-![ERD](/images/erd_antes.png)
+![ERD](./images/erd_antes.png)
 
 ### Camada Silver
 A camada Silver é responsável por tratar, limpar e integrar os dados vindos da camada Bronze, aplicando regras de negócio e garantindo qualidade e consistência.
@@ -97,7 +97,7 @@ São processos automatizados que conectam as diferentes camadas da arquitetura m
 
 Dados que serão posteriormente consumidos pelos usuários de negócio e analista de dados.
 
-![Pipeline](/images/pipelinedatabricks.png)
+![Pipeline](./images/pipelinedatabricks.png)
 
 # 5 - Dashboard no Power BI
 Como etapa final do processo analítico, foi desenvolvido um dashboard de vendas no Power BI, consumindo diretamente os dados processados na camada Gold do Databricks.
@@ -105,7 +105,7 @@ Como etapa final do processo analítico, foi desenvolvido um dashboard de vendas
 O objetivo principal desse painel é fornecer insights estratégicos sobre o desempenho comercial, permitindo que gestores e analistas de negócio tomem decisões baseadas em dados de forma rápida e assertiva.
 O mesmo pode ser acessado pelo [link](https://app.powerbi.com/view?r=eyJrIjoiZDhlNjg1YzAtYTk3NS00NDc5LWI0ZDUtNjc2NjJmZjZjNDVjIiwidCI6Ijg4NTA2YTc5LWZlYTctNDAwYS1hOTc4LTc1ZjAxMGYzMDcxZiJ9)
 
-![Dashboard](/images/dashboard.png)
+![Dashboard](./images/dashboard.png)
 
 # 6 - Próximos passos
 Como continuidade da evolução do projeto, estão previstas as seguintes iniciativas:
