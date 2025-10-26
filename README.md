@@ -48,11 +48,11 @@ Para simular um ambiente de produção, os dados estão armazenados em um banco 
 
 Para realizar a ingestão dos dados do PostgreSQL para o Databricks, será utilizado o Fivetran, utilizando seus conectores.
 
-![Fivetran](./fivetran.png)
+![Fivetran](/images/fivetran.png)
 
 A ingestão será realizada na camada raw, como apresentado no esquema abaixo:
 
-![Medallion](./medallion.png)
+![Medallion](/images/medallion.png)
 
 # 3 - Modelagem dos dados
 
@@ -73,11 +73,13 @@ As seguintes tabelas são utilizadas no modelo:
 
 O relacionamento entre as tabelas pode ser visto no diagrama abaixo.
 
-![ERD](./erd_antes.png)
+![ERD](/images/erd_antes.png)
 
 ### Camada Silver
 A camada Silver é responsável por tratar, limpar e integrar os dados vindos da camada Bronze, aplicando regras de negócio e garantindo qualidade e consistência.
 Nesta etapa, os dados deixam de estar apenas padronizados e passam a estar confiáveis e prontos para análises intermediárias ou para alimentar a camada Gold.
+
+Detalhes sobre as transformações realizadas na camada silver podem ser vistas no [link](https://github.com/diogo-minoru/first_project_databricks/tree/main/silver).
 
 ### Camada Gold
 A camada Gold é o nível mais alto da arquitetura Medallion e tem como principal objetivo fornecer dados prontos para análise, dashboards e indicadores de negócio.
@@ -85,12 +87,34 @@ Nesta etapa, os dados são derivados da camada Silver, passando por cálculos, a
 
 As tabelas Gold já vêm agregadas e modeladas (fatos e dimensões), reduzindo o volume de dados que o Power BI precisa processar. Isso melhora a performance das consultas
 
+Todas as transformações realizadas na camada gold podem ser vistas pelo [link](https://github.com/diogo-minoru/first_project_databricks/tree/main/gold)
+
 # 4 - Pipelines no Databricks
 As pipelines no Databricks são fluxos automatizados de ETL (Extract, Transform, Load) que permitem mover, transformar e orquestrar dados de forma contínua e escalável dentro do Lakehouse.
 
 * São processos automatizados que conectam as diferentes camadas da arquitetura medalhão (Raw → Bronze → Silver → Gold).
 * Permitem a execução de tarefas de ingestão, limpeza, transformação e enriquecimento de dados de maneira orquestrada e versionada.
 
-![Pipeline](./pipelinedatabricks.png)
+Dados que serão posteriormente consumidos pelos usuários de negócio e analista de dados.
+
+![Pipeline](/images/pipelinedatabricks.png)
 
 # 5 - Dashboard no Power BI
+Como etapa final do processo analítico, foi desenvolvido um dashboard de vendas no Power BI, consumindo diretamente os dados processados na camada Gold do Databricks.
+
+O objetivo principal desse painel é fornecer insights estratégicos sobre o desempenho comercial, permitindo que gestores e analistas de negócio tomem decisões baseadas em dados de forma rápida e assertiva.
+O mesmo pode ser acessado pelo [link](https://app.powerbi.com/view?r=eyJrIjoiZDhlNjg1YzAtYTk3NS00NDc5LWI0ZDUtNjc2NjJmZjZjNDVjIiwidCI6Ijg4NTA2YTc5LWZlYTctNDAwYS1hOTc4LTc1ZjAxMGYzMDcxZiJ9)
+
+![Dashboard](/images/dashboard.png)
+
+# 6 - Próximos passos
+Como continuidade da evolução do projeto, estão previstas as seguintes iniciativas:
+* Criação de jobs para insersão de novos dados.
+* Spark para processamento dos dados.
+Como continuidade da evolução do projeto, estão previstas as seguintes iniciativas:
+
+* Automatização de jobs no Databricks para orquestração da ingestão e atualização dos dados em intervalos definidos.
+
+* Implementação de processamento distribuído com Spark, visando otimizar a performance em grandes volumes de dados.
+
+* Expansão da camada Gold com novos modelos analíticos e indicadores.
