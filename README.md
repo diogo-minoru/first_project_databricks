@@ -48,7 +48,7 @@ Para simular um ambiente de produção, os dados estão armazenados em um banco 
 
 Para realizar a ingestão dos dados do PostgreSQL para o Databricks, será utilizado o Fivetran, utilizando seus conectores.
 
-![Fivetran](https://github.com/diogo-minoru/first_project_databricks/blob/main/images/fivetran.png)
+![Fivetran](./images/fivetran.png)
 
 A ingestão será realizada na camada raw, como apresentado no esquema abaixo:
 
