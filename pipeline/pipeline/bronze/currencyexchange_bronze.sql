@@ -1,4 +1,4 @@
-create or refresh streaming live table currencyexchange
+create or refresh streaming table currencyexchange
 as
 select *
 from stream first_project.raw_public.currencyexchange;
